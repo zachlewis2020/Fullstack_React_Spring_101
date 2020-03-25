@@ -1,5 +1,5 @@
 
-cd webapp
+cd web
 npm install
 npm run build
 rm -r ../src/main/resources/static
