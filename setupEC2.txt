@@ -12,13 +12,13 @@ gunzip openjdk-13_linux-x64_bin.tar.gz
 
 tar xvf openjdk-13_linux-x64_bin.tar
 
-export PATH=$PATH:`pwd`/jdk-13/bin
+export PATH=`pwd`/jdk-13/bin:$PATH:
 
 wget https://services.gradle.org/distributions/gradle-6.3-bin.zip
 
 unzip gradle-6.3-bin.zip
 
-export PATH=$PATH:`pwd`/gradle-6.3/bin:
+export PATH=`pwd`/gradle-6.3/bin:$PATH:
 
 
 #git clone https://github.com/devcmgm/Fullstack_React_Spring_101.git
