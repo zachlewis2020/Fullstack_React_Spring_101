@@ -29,6 +29,16 @@ class Home extends React.Component<RouteComponentProps> {
                 >
                     Page 2
                 </Button>
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    style={{color: 'yellow'}}
+                    onClick={() => {
+                        window.location.replace("/logout");
+                    }}
+                >
+                    Logout
+                </Button>
 
 
             </div>

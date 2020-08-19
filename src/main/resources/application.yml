@@ -1,0 +1,17 @@
+---
+okta:
+  oauth2:
+    issuer: https://zalmellc-training.okta.com/oauth2/default
+    client-id: 0oaott0imLsJGK1vM4x6
+    client-secret: wAP9Tu3nJgl9fX8AJjAovTThQjOg6oJJtDNhFdDS
+provider:
+  otka:
+    authorization-uri: https://zalmellc-training.okta.com/oauth2/default/v1/authorize
+    token-uri: https://oauth2/default/v1/token
+    user-info-uri: https://zalmellc-training.okta.com/oauth2/default/v1/userinfo
+    jwk-set-uri: https://zalmellc-training.okta.com/oauth2/default/v1/keys
+
+spring:
+  data:
+    rest:
+      basePath: api

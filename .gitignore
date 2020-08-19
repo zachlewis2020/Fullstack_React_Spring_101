@@ -1,0 +1,8 @@
+.DS_Store
+web/node_modules/*
+/.gradle/buildOutputCleanup/*
+.gradle/*
+.gradle/
+.gradle/6.2.2/
+.gradle/6.4.1/
+.idea/
