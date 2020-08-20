@@ -41,6 +41,26 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 }
 
+task installWebDependencies(type: Exec) {
+     workingDir "web"
+     commandLine 'npm','install'
+}
+
+task buildWeb(type: Exec, dependsOn: 'installWebDependencies') {
+     workingDir "web"
+     environment SKIP_PREFLIGHT_CHECK: "true"
+     commandLine 'npm','run','build'
+}
+
+task runJar(type: Exec) {
+    commandLine 'java','-Dserver.port=8080','-jar','build/libs/lesson_01-0.0.1-SNAPSHOT.jar'
+}
+
+task copyWeb(type: Copy, dependsOn: 'buildWeb') {
+     from "web/build"
+     into "src/main/resources/static"
+}
+
 test {
 	useJUnitPlatform()
 }

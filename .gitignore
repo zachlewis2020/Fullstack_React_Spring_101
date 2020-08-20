@@ -1,4 +1,7 @@
 .DS_Store
+build/*
+web/build/*
+src/main/resources/static/*
 web/node_modules/*
 /.gradle/buildOutputCleanup/*
 .gradle/*
