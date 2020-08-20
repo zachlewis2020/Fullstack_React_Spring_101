@@ -41,11 +41,21 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 }
 
+clean.doLast {
+ file('web/build').deleteDir()
+ file('src/main/resources/static').deleteDir()
+}
+
+bootJar.dependsOn('copyWeb')
+
 task installWebDependencies(type: Exec) {
      workingDir "web"
      commandLine 'npm','install'
 }
 
+task buildAll() {
+
+}
 task buildWeb(type: Exec, dependsOn: 'installWebDependencies') {
      workingDir "web"
      environment SKIP_PREFLIGHT_CHECK: "true"
