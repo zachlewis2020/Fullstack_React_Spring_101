@@ -1,4 +1,5 @@
 .DS_Store
+web/package-lock.json
 build/*
 web/build/*
 src/main/resources/static/*
