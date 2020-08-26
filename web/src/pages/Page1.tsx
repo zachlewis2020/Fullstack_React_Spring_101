@@ -2,6 +2,12 @@ import React, {useEffect, useState} from 'react';
 import {RouteComponentProps} from "react-router-dom";
 import {Button} from "@material-ui/core";
 import {getData} from "../apiUtils/webRequest"
+const {Wit, log} = require('node-wit');
+
+const client = new Wit({
+    accessToken: 'CCRYRDP6SW7CWRVE5VGUBPH34MIOBYNV',
+    logger: new log.Logger(log.DEBUG) // optional
+});
 
 function Page1(props: RouteComponentProps) {
 
@@ -11,6 +17,10 @@ function Page1(props: RouteComponentProps) {
         // Update the document title using the browser API
         document.title = `You clicked ${count} times`;
         getData();
+        client.message('What is happening tomorrow ?').then((data: any) => {
+            console.log('Yay, got Wit.ai response: ' + JSON.stringify(data));
+        })
+            .catch(console.error);
     });
 
 
