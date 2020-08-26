@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {RouteComponentProps} from "react-router-dom";
 import {Button} from "@material-ui/core";
 import {getData} from "../apiUtils/webRequest"
+import FormHook from "./FormHook";
 const {Wit, log} = require('node-wit');
 
 const client = new Wit({
@@ -49,6 +50,7 @@ function Page1(props: RouteComponentProps) {
             <button onClick={() => setCount(count + 1)}>
                 Click me
             </button>
+            <FormHook/>
         </div>
     );
 }
