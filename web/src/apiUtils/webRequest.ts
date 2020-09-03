@@ -41,5 +41,6 @@ const performPut = (endpoint: string, data: any): Promise<AxiosResponse> => {
 };
 
 
-export const getData = (): Promise<AxiosResponse> =>
-    performGet("getData");
+export const getData = (): Promise<AxiosResponse> => {
+    return   performGet("getData");
+}

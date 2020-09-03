@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const MyContext = React.createContext('');
+
 ReactDOM.render(
-  <React.StrictMode>
+    <MyContext.Provider value={'works'}>
     <App />
-  </React.StrictMode>,
+    </MyContext.Provider>,
   document.getElementById('root')
 );
 

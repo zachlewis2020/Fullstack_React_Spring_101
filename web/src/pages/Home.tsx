@@ -1,46 +1,25 @@
 import React from 'react';
-import { RouteComponentProps} from "react-router-dom";
-import {Button} from "@material-ui/core";
+import {RouteComponentProps} from "react-router-dom";
+import Activities from "./Activities";
+import AskMe from "./AskMe";
+import BannerMsg from "./BannerMsg";
+import HeaderMsg from "./HeaderMsg";
+import Grid from '@material-ui/core/Grid';
 
 class Home extends React.Component<RouteComponentProps> {
 
     render() {
 
         return (
-            <div className="App">
-              <h1>Home</h1>
-                <Button
-                    variant="contained"
-                    color="secondary"
-                    style={{color: 'green'}}
-                    onClick={() => {
-                        this.props.history.push('/page1');
-                    }}
-                >
-                    Page 1
-                </Button>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    style={{color: 'blue'}}
-                    onClick={() => {
-                        this.props.history.push('/page2');
-                    }}
-                >
-                    Page 2
-                </Button>
-                <Button
-                    variant="contained"
-                    color="secondary"
-                    style={{color: 'yellow'}}
-                    onClick={() => {
-                        window.location.replace("/logout");
-                    }}
-                >
-                    Logout
-                </Button>
-
-
+            <div>
+                <Grid container>
+                    <Grid item xs={12}>
+                        <HeaderMsg/>
+                        <BannerMsg/>
+                    </Grid>
+                </Grid>
+                <Activities/>
+                <AskMe/>
             </div>
         );
     }
