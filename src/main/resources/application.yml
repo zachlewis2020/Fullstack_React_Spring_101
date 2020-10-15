@@ -1,15 +1,15 @@
 ---
 okta:
   oauth2:
-    issuer: https://zalmellc-training.okta.com/oauth2/default
-    client-id: 0oaott0imLsJGK1vM4x6
-    client-secret: wAP9Tu3nJgl9fX8AJjAovTThQjOg6oJJtDNhFdDS
+    issuer: https://positivelytonya.okta.com
+    client-id: 0oa168j5sq2qM4vn24x7
+    client-secret: pz-BoQ5NUN824_j6k5-7dBtxnmJR9PnO_GH5cYpu
 provider:
   otka:
-    authorization-uri: https://zalmellc-training.okta.com/oauth2/default/v1/authorize
+    authorization-uri: https://positivelytonya.okta.com/oauth2/default/v1/authorize
     token-uri: https://oauth2/default/v1/token
-    user-info-uri: https://zalmellc-training.okta.com/oauth2/default/v1/userinfo
-    jwk-set-uri: https://zalmellc-training.okta.com/oauth2/default/v1/keys
+    user-info-uri: https://positivelytonya.okta.com/oauth2/default/v1/userinfo
+    jwk-set-uri: https://positivelytonya.okta.com/oauth2/default/v1/keys
 
 spring:
   data:

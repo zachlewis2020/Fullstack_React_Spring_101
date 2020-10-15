@@ -62,7 +62,7 @@ task buildWeb(type: Exec, dependsOn: 'installWebDependencies') {
      commandLine 'npm','run','build'
 }
 
-task runJar(type: Exec) {
+task runJar(type: Exec, dependsOn: 'copyWeb' ) {
     commandLine 'java','-Dserver.port=8080','-jar','build/libs/lesson_01-0.0.1-SNAPSHOT.jar'
 }
 

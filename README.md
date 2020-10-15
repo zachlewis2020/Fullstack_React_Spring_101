@@ -14,4 +14,4 @@ This is for beginners.  After this short session you understand the following:
 
 This is part one of a seven (7) part tutorial on becoming a full stack developer.
 
-
+https://docs.google.com/presentation/d/1szuKy8wpsgVkppy6cy1Elc-DKU-FmULfwy4AywaROCM/edit?usp=sharing
